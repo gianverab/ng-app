@@ -62,14 +62,14 @@ gulp.task('images', function(){
 gulp.task('html', function(){
 	gulp.src(SRC)
 		.pipe(plumber())
-	    .pipe(gulp.dest('./'))
+	    .pipe(gulp.dest(DEST))
 		.pipe(notify({message: 'HTML compiled OK!'}));
 });
 
 //Server set up and watch
 gulp.task('serve', ['html', 'styles', 'scripts', 'images'], function (){
 	browsersync.init({
-		server: './'
+		server: DEST
 	});
 	gulp.watch(SRC, ['html']);
 	gulp.watch(SRC).on('change', reload);
