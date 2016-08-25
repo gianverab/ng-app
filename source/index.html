@@ -3,7 +3,7 @@
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
-<html lang="en">
+<html lang="en" ng-app="test">
 <!--<![endif]-->
 <head>
     <meta charset="utf-8">
@@ -45,7 +45,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/">HOME</a></li>
+                    <li><a href="#/main">HOME</a></li>
                     <li><a href="services.html">SERVICES</a></li>
                      <li><a href="pricing.html">PRICING</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
@@ -56,29 +56,9 @@
     </div>
      <!--END NAV SECTION -->
     
-    <!--HOME SECTION-->
-    <div id="home-sec">   
-	    <div class="container" id="home" >
-	        <div class="row text-center">
-	            <div class="col-md-12">
-	                <span class="head-main">GET PAGE DONE</span>
-	                <h2 class="head-sub-main">It take efforts</h2>
-	                <h3 class="head-last">Lorem ipsum dolor sit ametLorem ipsum dolor sit amet</h3>
-	                <a href="#about-sec" class="btn btn-danger btn-lg head-btn-one">DOWNLOAD THIS THEME NOW !</a> 
-	            </div>
-	        </div>
-	    </div>
+    <div ng-controller="MainCtrl">
+    	<div ng-view></div>
     </div>
-    <!--END HOME SECTION-->
-
-    
-    <!-- SOCIAL STATS SECTION-->
-    <section>
-        <div class="container">
-            
-        </div>
-    </section>
-    <!-- END SOCIAL STATS SECTION-->
 
     <!--FOOTER SECTION -->
     <div id="footer">
@@ -91,7 +71,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <!-- BOOTSTRAP CORE SCRIPT   -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
+    <!-- ANGULARJS  -->
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
     <!-- CUSTOM SCRIPTS -->
     <script src="app.min.js"></script>
 
