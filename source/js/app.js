@@ -25,8 +25,10 @@ var app = angular.module("test", ['ngRoute'])
     $scope.job = 'Frontend Developer';
     console.log($scope);
 }])
-.controller('ServiceCtrl', ['$scope', function ($scope){
-    console.log($scope);
+.controller('ServiceCtrl', ['$scope', '$http', function ($scope, $http){
+    $http.get('./assets/services.json').then(function (response) {
+    	$scope.services = response.data;
+    })
 }])
 .controller('PricingCtrl', ['$scope', function ($scope){
     console.log($scope);

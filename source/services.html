@@ -14,7 +14,7 @@
                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                          Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.              
                     </p>
-                      </div>
+                    </div>
                  <div class="col-md-6">
                     <h2>Lorem ipsum dolor sit amet</h2>
                     <p>
@@ -27,44 +27,13 @@
                      </div>
                
                 <div class="col-md-12 text-center">
-                    <div class="col-md-4 ">
-                        <div class="service-div">
-                            <i class="fa fa-desktop fa-5x faa-vertical animated"></i>
-                            <h4>App Development</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                            </p>
-                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 ">
-                        <div class="service-div">
-                            <i class="fa fa-flask fa-5x faa-ring animated"></i>
-                            <h4>Realtime Web Apps</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                            </p>
-                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </p>
-                        </div>
-                    </div>
-                   
-                    <div class="col-md-4">
-                        <div class="service-div">
-                            <i class="fa fa-credit-card fa-5x faa-shake animated"></i>
-                            <h4>Machine Learning</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                            </p>
-                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </p>
+                    <div ng-repeat="service in services">
+                        <div class="col-md-4 ">
+                            <div class="service-div">
+                                <i ng-class="[service.font, service.icon, service.size, service.direction, service.type]"></i>
+                                <h4>{{service.name}}</h4>
+                                <p>{{service.description}}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

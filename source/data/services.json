@@ -1,0 +1,32 @@
+[
+	{
+		"id": 1,
+		"name": "App Development",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec nisl odio. Mauris vehicula at nunc id posuere. Curabitur nec nisl odio, mauris vehicula at nunc.",
+		"font": "fa",
+		"icon": "fa-desktop",
+		"size": "fa-5x",
+		"direction": "faa-vertical",
+		"type": "animated"
+	},
+	{
+		"id": 2,
+		"name": "Virtual Reality",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec nisl odio. Mauris vehicula at nunc id posuere. Curabitur nec nisl odio, mauris vehicula at nunc.",
+		"font": "fa",
+		"icon": "fa-flask",
+		"size": "fa-5x",
+		"direction": "faa-ring",
+		"type": "animated"
+	},
+	{
+		"id": 3,
+		"name": "Machine Learning",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec nisl odio. Mauris vehicula at nunc id posuere. Curabitur nec nisl odio, mauris vehicula at nunc.",
+		"font": "fa",
+		"icon": "fa-credit-card",
+		"size": "fa-5x",
+		"direction": "faa-shake",
+		"type": "animated"
+	}
+]

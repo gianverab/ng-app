@@ -23,6 +23,7 @@ var JS = './source/js/*.js',
 	CSS = './source/sass/*.scss',
 	SRC = './source/*.html',
 	IMG = './source/img/*',
+	DATA = './source/data/*.json',
 	DEST = './public'; 
 
 //Compile Sass, autoprefix, concat & minify
@@ -66,8 +67,16 @@ gulp.task('html', function(){
 		.pipe(notify({message: 'HTML compiled OK!'}));
 });
 
+//Sending data to a assests folder
+gulp.task('data', function(){
+	gulp.src(DATA)
+		.pipe(plumber())
+	    .pipe(gulp.dest('./public/assets'))
+		.pipe(notify({message: 'DATA on response!'}));
+});
+
 //Server set up and watch
-gulp.task('serve', ['html', 'styles', 'scripts', 'images'], function (){
+gulp.task('serve', ['html', 'styles', 'scripts', 'images', 'data'], function (){
 	browsersync.init({
 		server: DEST
 	});
@@ -79,6 +88,8 @@ gulp.task('serve', ['html', 'styles', 'scripts', 'images'], function (){
 	gulp.watch(JS).on('change', reload);
 	gulp.watch(IMG, ['images']);
 	gulp.watch(IMG).on('change', reload);
+	gulp.watch(DATA, ['data']);
+	gulp.watch(DATA).on('change', reload);
 })
 //Main watch task
 gulp.task('watch', function (){	
@@ -86,7 +97,8 @@ gulp.task('watch', function (){
 	gulp.watch(CSS, ['styles']);
 	gulp.watch(JS, ['scripts']);
 	gulp.watch(IMG, ['images']);
+	gulp.watch(DATA, ['data']);
 });
 
 //Default gulp command
-gulp.task('default', ['styles', 'images', 'html', 'scripts', 'watch', 'serve']);
+gulp.task('default', ['styles', 'images', 'html', 'scripts', 'data', 'watch', 'serve']);
