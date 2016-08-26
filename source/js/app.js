@@ -30,8 +30,10 @@ var app = angular.module("test", ['ngRoute'])
     	$scope.services = response.data;
     })
 }])
-.controller('PricingCtrl', ['$scope', function ($scope){
-    console.log($scope);
+.controller('PricingCtrl', ['$scope', '$http', function ($scope, $http){
+    $http.get('./assets/plans.json').then(function (response) {
+    	$scope.plans = response.data;
+    })
 }])
 .controller('ContactCtrl', ['$scope', function ($scope){
     console.log($scope);

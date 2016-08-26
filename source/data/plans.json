@@ -1,0 +1,38 @@
+[
+	{
+		"id": 1,
+		"name": "basic plan",
+		"accounts": "12",
+		"emails": "20",
+		"space": "50GB",
+		"price": "$99",
+		"button": "btn",
+		"status": "btn-danger",
+		"size": "btn-lg",
+		"type": "btn-block"
+	},
+	{
+		"id": 2,
+		"name": "popular plan",
+		"accounts": "25",
+		"emails": "40",
+		"space": "150GB",
+		"price": "$199",
+		"button": "btn",
+		"status": "btn-primary",
+		"size": "btn-lg",
+		"type": "btn-block"
+	},
+	{
+		"id": 3,
+		"name": "value plan",
+		"accounts": "50",
+		"emails": "60",
+		"space": "Unlimited",
+		"price": "$299",
+		"button": "btn",
+		"status": "btn-success",
+		"size": "btn-lg",
+		"type": "btn-block"
+	}
+]
